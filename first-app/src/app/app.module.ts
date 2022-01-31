@@ -2,15 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { DataComponent } from './data.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, // components,
+    DataComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule // submodules
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [], // we will talk about it later on
+  bootstrap: [AppComponent] // is available only in main top level module
 })
 export class AppModule { }
