@@ -7,12 +7,13 @@ export class Car {
     }*/
 
     constructor(
-        private speed : number,
-        private date : Date 
+        private speed : number = 10,
+        private date : Date = new Date()
      ) { }
 
-    speedUp() {
-        this.speed++
+    speedUp(spd ?: number) { // ?  says optional
+        if(spd)
+            this.speed++
     }
 }
 
