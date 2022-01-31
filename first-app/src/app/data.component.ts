@@ -7,6 +7,9 @@ import { Component } from "@angular/core";
             <h3>
                 Well I am data component
             </h3>
+            <div>
+                <app-little></app-little>
+            </div>
         </div>
     `,
     styles : [ 
