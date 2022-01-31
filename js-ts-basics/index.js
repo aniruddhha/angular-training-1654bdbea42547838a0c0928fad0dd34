@@ -4,6 +4,11 @@ var j = 20 // unscoped version
 let k = 30 //  scoped version -> es6 feature -> use this
 const l = 40 // constant -> es6 fature -> use this 
 
+j = 'sjdfgsjfd' // string
+j = true // boolean
+j = {} // javascript object
+j = new Date() // date object
+
 function abc() { // function defination
     console.log('printing data')
     console.log(' i '+i)
