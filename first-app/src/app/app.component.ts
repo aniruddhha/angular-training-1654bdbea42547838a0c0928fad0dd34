@@ -18,4 +18,8 @@ export class AppComponent {
   onNowDate() {
     this.title = new Date().toISOString()
   }
+
+  onParaClk(dt : string) {
+    console.log(dt)
+  }
 }

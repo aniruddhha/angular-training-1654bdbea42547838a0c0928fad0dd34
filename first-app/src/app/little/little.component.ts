@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 // ng g c little
 
@@ -9,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LittleComponent implements OnInit {
 
+  @Input()
+  text : string = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, ea! Illum obcaecati dolor ad culpa, nihil esse! Facere dignissimos voluptas, soluta laudantium cumque maiores. Delectus velit ab temporibus impedit aspernatur!'
+
+  @Output()
+  paraClk : EventEmitter<string> = new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClk() {
+    this.paraClk.emit(this.text.split(' ')[0])
   }
 
 }
