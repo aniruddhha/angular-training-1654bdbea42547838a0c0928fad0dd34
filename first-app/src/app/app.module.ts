@@ -10,6 +10,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { MagicDirective } from './directives/magic.directive';
 import { AbcComponent } from './abc/abc.component';
 import { PqrComponent } from './pqr/pqr.component';
+import { CowService } from './cow.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { PqrComponent } from './pqr/pqr.component';
   imports: [
     BrowserModule // submodules
   ],
-  providers: [], // we will talk about it later on
+  // providers: [CowService], // are used to register services
   bootstrap: [AppComponent] // is available only in main top level module
 })
 export class AppModule { }

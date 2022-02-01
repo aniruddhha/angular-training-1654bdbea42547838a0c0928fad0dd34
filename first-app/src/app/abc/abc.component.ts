@@ -4,7 +4,8 @@ import { CowService } from '../cow.service';
 @Component({
   selector: 'app-abc',
   templateUrl: './abc.component.html',
-  styleUrls: ['./abc.component.css']
+  styleUrls: ['./abc.component.css'],
+  // providers:[CowService]
 })
 export class AbcComponent implements OnInit {
 

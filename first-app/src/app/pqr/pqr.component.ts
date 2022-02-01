@@ -4,7 +4,8 @@ import { CowService } from '../cow.service';
 @Component({
   selector: 'app-pqr',
   templateUrl: './pqr.component.html',
-  styleUrls: ['./pqr.component.css']
+  styleUrls: ['./pqr.component.css'],
+  // providers:[CowService]
 })
 export class PqrComponent implements OnInit {
 
