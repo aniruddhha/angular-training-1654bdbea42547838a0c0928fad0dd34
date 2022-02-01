@@ -6,12 +6,19 @@ import { DataComponent } from './data.component';
 import { LittleComponent } from './little/little.component';
 import { InteractionComponent } from './interaction/interaction.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { MagicDirective } from './directives/magic.directive';
 
 @NgModule({
   declarations: [
     AppComponent, // components,
     DataComponent, 
-    LittleComponent, InteractionComponent, LifecycleComponent
+    LittleComponent, 
+    InteractionComponent, 
+    LifecycleComponent, 
+    DirectivesComponent, 
+    
+    MagicDirective
   ],
   imports: [
     BrowserModule // submodules
