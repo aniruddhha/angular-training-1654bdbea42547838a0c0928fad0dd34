@@ -1,5 +1,7 @@
 <div>
-  <app-lifecycle [date]="title" *ngIf="isShow"></app-lifecycle>
+  <app-lifecycle [date]="title" *ngIf="isShow">
+     <h1> I am not a part of lifecycle component </h1> <!-- content projection -->
+  </app-lifecycle>
 </div>
 <div>
   <input type="button" value="Toggle" (click)="onBtnClk()">
