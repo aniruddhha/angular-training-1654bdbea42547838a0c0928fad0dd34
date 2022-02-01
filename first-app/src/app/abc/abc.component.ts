@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CowService } from '../cow.service';
 
 @Component({
   selector: 'app-abc',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbcComponent implements OnInit {
 
-  constructor() { }
+  url : string = ''
+
+  constructor(
+    private cow : CowService // abc component is dependent on cow service
+  ) { }
 
   ngOnInit(): void {
+    this.url = this.cow.config.url
+  }
+
+  onAbc() {
+    this.cow.config.url = 'abc.com'
+  }
+
+  onRefresh() {
+    this.url = this.cow.config.url
   }
 
 }
