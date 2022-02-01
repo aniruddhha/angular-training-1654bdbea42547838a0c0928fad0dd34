@@ -4,12 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { DataComponent } from './data.component';
 import { LittleComponent } from './little/little.component';
+import { InteractionComponent } from './interaction/interaction.component';
 
 @NgModule({
   declarations: [
     AppComponent, // components,
     DataComponent, 
-    LittleComponent
+    LittleComponent, InteractionComponent
   ],
   imports: [
     BrowserModule // submodules
