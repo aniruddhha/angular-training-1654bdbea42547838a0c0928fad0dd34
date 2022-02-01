@@ -18,6 +18,8 @@ export class InteractionComponent {
   num1 = 10
   num2 = 30
 
+  isBtn = false
+
   constructor() { }
 
   addNums() {

@@ -5,12 +5,13 @@ import { AppComponent } from './app.component';
 import { DataComponent } from './data.component';
 import { LittleComponent } from './little/little.component';
 import { InteractionComponent } from './interaction/interaction.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
     AppComponent, // components,
     DataComponent, 
-    LittleComponent, InteractionComponent
+    LittleComponent, InteractionComponent, LifecycleComponent
   ],
   imports: [
     BrowserModule // submodules

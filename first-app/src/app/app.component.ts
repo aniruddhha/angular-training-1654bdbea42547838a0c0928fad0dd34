@@ -9,8 +9,13 @@ import { Component } from '@angular/core';
 }) // decorator -> annotation
 export class AppComponent {
   title = 'first-app';
+  isShow = false
 
-  businessLogic() {
-    
+  onBtnClk() {
+    this.isShow = !this.isShow
+  }
+
+  onNowDate() {
+    this.title = new Date().toISOString()
   }
 }

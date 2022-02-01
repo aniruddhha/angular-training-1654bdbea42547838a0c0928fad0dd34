@@ -1,11 +1,7 @@
 <div>
-  <h1> Welcome to Angular </h1>
+  <app-lifecycle [date]="title" *ngIf="isShow"></app-lifecycle>
 </div>
-
 <div>
-  <data-comp></data-comp>
-</div>
-
-<div>
-  <app-interaction></app-interaction>
+  <input type="button" value="Toggle" (click)="onBtnClk()">
+  <input type="button" value="Now Date" (click)="onNowDate()">
 </div>

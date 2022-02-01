@@ -14,6 +14,7 @@
     <input type="button" class="btn" value="Submit"/>
     <input type="button" [class]="{ btn : true, raised : true }" value="Okay"/>
     <input type="button" [class.btn]="false" value="Okay"/>
+    <input type="button" [class.btn]="isBtn" value="Okay"/>
     
     <div>
         <input type="button" value="Change" (click)="onClickOkay()"/> <!-- () event binding -->
