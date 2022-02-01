@@ -8,8 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 }) // decorator -> annotation
 export class AppComponent {
-  title = 'first-app';
+  title = 'Directives are classes that add additional behavior to';
   isShow = false
+
+  date = new Date()
+  amount = 123445
 
   onBtnClk() {
     this.isShow = !this.isShow

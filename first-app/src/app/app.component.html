@@ -4,7 +4,14 @@
     (paraClk)="onParaClk($event)">
   </app-little>
 </div> -->
-<div>
+<!-- <div>
   <app-abc></app-abc>
   <app-pqr></app-pqr>
+</div> -->
+
+<div>
+  <p> Date is {{date | date:"dd-MMM-yyyy" }} </p>
+  <p> Amount is {{amount | currency:"INR"}} </p>
+  <p> Chaining of Pipes {{title | uppercase | slice:0:5}} </p>
+  <p> Custom Pipe {{title | splitter:200}} </p>
 </div>

@@ -12,6 +12,7 @@ import { AbcComponent } from './abc/abc.component';
 import { PqrComponent } from './pqr/pqr.component';
 import { CowService } from './cow.service';
 import { LoggerService } from './logger.service';
+import { SplitterPipe } from './splitter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { LoggerService } from './logger.service';
     
     MagicDirective, 
     AbcComponent, 
-    PqrComponent
+    PqrComponent, SplitterPipe
   ],
   imports: [
     BrowserModule // submodules
