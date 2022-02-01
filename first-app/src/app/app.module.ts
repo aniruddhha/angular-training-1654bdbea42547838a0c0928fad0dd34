@@ -11,6 +11,7 @@ import { MagicDirective } from './directives/magic.directive';
 import { AbcComponent } from './abc/abc.component';
 import { PqrComponent } from './pqr/pqr.component';
 import { CowService } from './cow.service';
+import { LoggerService } from './logger.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { CowService } from './cow.service';
   imports: [
     BrowserModule // submodules
   ],
-  // providers: [CowService], // are used to register services
+  // providers: [CowService,LoggerService], // are used to register services
   bootstrap: [AppComponent] // is available only in main top level module
 })
 export class AppModule { }
