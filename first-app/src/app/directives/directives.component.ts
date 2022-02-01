@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
+  mobiles = [
+    'abc', 'pqr', 'lmn', 'xyz'
+  ]
+
   st = {'border' : '1px solid red'}
   constructor() { }
 

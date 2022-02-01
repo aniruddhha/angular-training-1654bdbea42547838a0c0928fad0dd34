@@ -7,3 +7,14 @@
 <div>
     <input type='text' placeholder="Your Name" appMagic/>
 </div>
+<div>
+    <iframe *ngIf="false" src="https://aniruddhakudalkar.com" width="300px" height="300px"></iframe>
+</div>
+<div>
+    <p *ngFor="let mb of mobiles">{{mb}}</p>
+</div>
+<div>
+    <ng-template [ngIf]="true">
+        <iframe src="https://aniruddhakudalkar.com" width="300px" height="300px"></iframe>
+    </ng-template>
+</div>
