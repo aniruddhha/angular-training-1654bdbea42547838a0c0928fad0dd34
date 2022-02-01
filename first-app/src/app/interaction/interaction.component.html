@@ -4,12 +4,22 @@
     </h1>
     <div>
         <img src="{{image}}"/> <!-- {{}} interpolation binding -->
+        <p>Addition is {{ num1 + num2 }} </p>
+        <p>Addition is {{ addNums() }} </p>
+        <p>Date is {{ today() }} </p>
     </div>
 
     <div [style]="obSt"></div> <!-- [] property binding -->
+    <div [style.border]="'1px solid red'">hello</div>
+    <input type="button" class="btn" value="Submit"/>
+    <input type="button" [class]="{ btn : true, raised : true }" value="Okay"/>
+    <input type="button" [class.btn]="false" value="Okay"/>
     
     <div>
-        <input type="button" value="Okay"/> <!-- () event binding -->
+        <input type="button" value="Change" (click)="onClickOkay()"/> <!-- () event binding -->
+    </div>
+    <div>
+        <input placeholder="Your Name" type="text" (keyup)="onNameChange($event)" />
     </div>
     
 </div>

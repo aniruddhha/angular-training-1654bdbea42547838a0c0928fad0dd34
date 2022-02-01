@@ -15,5 +15,26 @@ export class InteractionComponent {
     height : '100px'
   }
 
+  num1 = 10
+  num2 = 30
+
   constructor() { }
+
+  addNums() {
+    return this.num1 + this.num2
+  }
+
+  today() {
+    return new Date()
+  }
+
+  onClickOkay() {
+    this.userName = 'some pqr'
+  }
+
+  onNameChange(md : any) {
+    const dt = md.target['value']
+    console.log(dt)
+    this.userName = dt
+  }
 }

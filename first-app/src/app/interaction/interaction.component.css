@@ -1,0 +1,11 @@
+/* custom class */
+.btn {
+    width: 100px;
+    height: 50px;
+    background-color: teal;
+    color: white;
+}
+/* custom class */
+.raised {
+    box-shadow: violet;
+}
