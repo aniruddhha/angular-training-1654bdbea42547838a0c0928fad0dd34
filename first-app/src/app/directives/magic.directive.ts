@@ -1,5 +1,5 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
-
+// ng g directive name
 @Directive({
   selector: '[appMagic]'
 })
