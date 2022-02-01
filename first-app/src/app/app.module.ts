@@ -8,6 +8,8 @@ import { InteractionComponent } from './interaction/interaction.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { MagicDirective } from './directives/magic.directive';
+import { AbcComponent } from './abc/abc.component';
+import { PqrComponent } from './pqr/pqr.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MagicDirective } from './directives/magic.directive';
     LifecycleComponent, 
     DirectivesComponent, 
     
-    MagicDirective
+    MagicDirective, 
+    AbcComponent, 
+    PqrComponent
   ],
   imports: [
     BrowserModule // submodules
