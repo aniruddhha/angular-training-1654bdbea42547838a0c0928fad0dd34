@@ -8,7 +8,8 @@ import { DashComponent } from './dash/dash.component';
 import { UsersComponent } from './users/users.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UserDetailsComponent } from './users/user-details.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { RegistrationComponent } from './registration/registration.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http'
     DashComponent,
     UsersComponent,
     NotFoundComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

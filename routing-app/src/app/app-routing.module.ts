@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashComponent } from './dash/dash.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { UserDetailsComponent } from './users/user-details.component';
 import { UsersComponent } from './users/users.component';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dash/:user', component: DashComponent },
   { path: 'users', component: UsersComponent, children: userChildrenRoutes },
+  { path: 'reg', component: RegistrationComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
