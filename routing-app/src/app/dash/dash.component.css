@@ -1,0 +1,16 @@
+.hdr {
+    width: 98%;
+    height: 50px;
+    background-color: teal;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: white;
+}
+
+
+
