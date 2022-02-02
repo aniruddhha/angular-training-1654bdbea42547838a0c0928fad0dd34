@@ -1,27 +1,32 @@
 
 <div>
-    <form>
+    <form (ngSubmit)="onSubmit()" [formGroup]="fg">
         <div>
             <label>UserName</label>
-            <input type="text" placeholder="User Name"/>
-            <label>user name is mandetory</label>
+            <input  type="text" placeholder="User Name" formControlName="userName"/>
+            <label [style.color]="'red'" *ngIf="getUserName().invalid"> ❌ user name is mandetory</label>
+            <label [style.color]="'green'" *ngIf="getUserName().valid"> ✅ username is correct</label>
         </div>
         <div>
             <label>Password</label>
-            <input type="password" placeholder="Password"/>
-            <label>password is mandetory</label>
+            <input type="password" placeholder="Password" formControlName="password"/>
+            <label [style.color]="'red'" *ngIf="getPassword().invalid"> ❌ password is mandetory</label>
+            <label [style.color]="'green'" *ngIf="getPassword().valid"> ✅ password is correct</label>
         </div>
         <div>
             <label>Age</label>
-            <input type="number" placeholder="Age"/>
+            <input type="number" placeholder="Age" formControlName="age"/>
         </div>
         <div>
             <label>Email</label>
-            <input type="email" placeholder="Email"/>
-            <label>Email is mandetory</label>
+            <input type="email" placeholder="Email" formControlName="email"/>
+            <label [style.color]="'red'" *ngIf="getEmail().invalid">❌ Email is mandetory</label>
+            <label [style.color]="'green'" *ngIf="getEmail().valid"> ✅ Email is correct</label>
         </div>
         <div>
             <input type="submit" value="Save"/>
+            <label *ngIf="fg.invalid" [style.color]="'red'"> ❌ Form is invalid </label>
+            <label *ngIf="fg.valid" [style.color]="'green'"> ✅ Form is valid </label>
         </div>
     </form>
 </div>
