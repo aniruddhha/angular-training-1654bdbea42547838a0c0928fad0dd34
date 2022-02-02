@@ -29,4 +29,18 @@ export class DashComponent implements OnInit {
     })
   }
 
+  onSave() {
+
+    const post : Post = {
+      id : 1,
+      userId : 10,
+      title : 'title',
+      body :' lskfjslkfjlksgj slgj'
+    }
+
+    this.restApi.postData(post).subscribe({
+      next : res => console.log(res)
+    })
+
+  }
 }
