@@ -3,12 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashComponent } from './dash/dash.component';
 import { LoginComponent } from './login/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { UserDetailsComponent } from './users/user-details.component';
 import { UsersComponent } from './users/users.component';
+
+const userChildrenRoutes: Routes = [
+  // :id is placeholder(route/path variable) for dynamic value
+  { path: ':id', component: UserDetailsComponent }
+]
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dash', component: DashComponent },
-  { path: 'users', component: UsersComponent },
+  { path: 'users', component: UsersComponent, children: userChildrenRoutes },
   { path: '**', component: NotFoundComponent }
 ];
 

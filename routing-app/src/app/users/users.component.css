@@ -6,3 +6,9 @@ table, th, td {
     border: 1px solid gray;
     border-collapse: collapse;
 }
+th {
+    background-color: honeydew;
+}
+td {
+    text-align: center;
+}
