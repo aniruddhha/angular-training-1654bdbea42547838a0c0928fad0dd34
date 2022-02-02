@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { VehicleComponent } from './vehicle.component';
+import { VehicleRoutingModule } from './vehicle.routing.module';
 
 
 // --flat say --> do not create new folder and create in same folder
@@ -11,7 +12,8 @@ import { VehicleComponent } from './vehicle.component';
     VehicleComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    VehicleRoutingModule
   ],
   exports : [
     VehicleComponent

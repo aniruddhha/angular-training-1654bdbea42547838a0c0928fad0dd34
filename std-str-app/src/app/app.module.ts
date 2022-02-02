@@ -15,11 +15,13 @@ import { VehicleModule } from './vehicle/vehicle.module';
     BrowserModule,
     AppRoutingModule,
 
+    // modules should be loaded on demand -> lazy loading
+
     // feature module
     // whenever AppModule loads, all below modules will also load
-    UserModule,
-    VehicleModule,
-    InsuranceModule
+    // UserModule,
+    // VehicleModule,
+    // InsuranceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

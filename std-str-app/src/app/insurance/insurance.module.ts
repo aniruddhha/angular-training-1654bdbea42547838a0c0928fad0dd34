@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InsuranceComponent } from './insurance.component';
+import { InsuranceRoutingModule } from './insurance.routing.module';
 
 
 
@@ -9,7 +10,8 @@ import { InsuranceComponent } from './insurance.component';
     InsuranceComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    InsuranceRoutingModule
   ],
   exports : [
     InsuranceComponent
