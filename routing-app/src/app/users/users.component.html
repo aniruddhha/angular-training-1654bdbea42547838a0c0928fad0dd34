@@ -1,1 +1,14 @@
-<p>users works!</p>
+<table border='1'>
+    <tr>
+      <th>Id</th>
+      <th>User Name</th>
+      <th>Dob</th>
+      <th>City</th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.userId}}</td>
+        <td>{{user.userName}}</td>
+        <td>{{user.dob}}</td>
+        <td>{{user.city}}</td>
+    </tr>
+  </table>
