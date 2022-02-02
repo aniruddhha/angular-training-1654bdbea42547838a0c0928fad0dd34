@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestApiService } from '../login/rest-api.service';
 import { Post } from './post.domain';
+import { interval } from 'rxjs';
+
 
 @Component({
   selector: 'app-dash',
@@ -24,9 +26,13 @@ export class DashComponent implements OnInit {
 
     this.actRt.params.subscribe( prm => this.user = prm['user'] )
 
-    this.restApi.getRequest().subscribe( {
-      next : res => this.posts = res as Array<Post>
+    this.restApi.getRequest().subscribe({
+      next : res => this.posts = res,
+      error : err => console.log(`Error Captured ${err}`) 
     })
+
+    // interval(1000).subscribe( tk =>  this.today = new Date() ) // it is very bad; it is creating data object every second
+   
   }
 
   onSave() {
