@@ -10,12 +10,14 @@ describe('AppComponent', () => {
     }).compileComponents(); // please load component
   });
 
+  // component is created or not
   it('should create the component', () => { // it is test case
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
+  // this checks logic addtion is correct or not
   it(`should check addition'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -23,6 +25,7 @@ describe('AppComponent', () => {
     expect(app.res).toBe(44)
   });
 
+  // actually 44 is rendered on screen or not
   it('should check addition on UI', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -30,8 +33,20 @@ describe('AppComponent', () => {
     fixture.detectChanges(); // reflect results on the UI
 
     const compiled = fixture.nativeElement as HTMLElement;
-    const actual = compiled.querySelector('#res')?.textContent
-    const expcted = 'Addition is 44'
-    expect(actual).toEqual(expcted)
+    const actualTextContext = compiled.querySelector('#res')?.textContent
+    const expctedTextContent = 'Addition is 44'
+    expect(actualTextContext).toEqual(expctedTextContent)
   });
+
+  it('check if 99', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.onBtn()
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const actualTextContext = compiled.querySelector('#res')?.textContent
+    const expctedTextContent = 'Addition is 99'
+    expect(actualTextContext).toEqual(expctedTextContent)
+  })
 });

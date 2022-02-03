@@ -12,4 +12,8 @@ export class AppComponent {
   add(num1 : number, num2 : number) {
     this.res = num1 + num2
   }
+
+  onBtn() {
+    this.add(89, 10)
+  }
 }
