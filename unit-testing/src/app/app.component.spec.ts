@@ -79,11 +79,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
 
     const ip: HTMLElement = fixture.nativeElement.querySelector('#ip')
-    ip.dispatchEvent(new MouseEvent('mouseover', {
-      view: window,
-      bubbles: true,
-      cancelable: true
-  }))
+    ip.dispatchEvent(new MouseEvent('mouseover'))
 
     fixture.detectChanges();
 
