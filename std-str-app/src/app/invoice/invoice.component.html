@@ -28,9 +28,9 @@
                         <td>{{invoice.amount | currency:'INR'}}</td>
                         <td>{{invoice.status == 1 ? '🚩': '⛳️'}}</td>
                         <td> 
-                            <a> ✏️ </a> 
-                            <a> ❌ </a> 
-                            <a>👁 </a> 
+                            <a [routerLink]="['#']"> ✏️ </a> 
+                            <a class="ms-3" [routerLink]="['#']"> ❌ </a> 
+                            <a class="ms-3" [routerLink]="['#']">👁 </a> 
                         </td>
                     </tr>
                 </tbody>
