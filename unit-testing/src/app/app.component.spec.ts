@@ -1,4 +1,4 @@
-import { TestBed, tick } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { BasicDirective } from './basic.directive';
 import { FirstPipe } from './first.pipe';
