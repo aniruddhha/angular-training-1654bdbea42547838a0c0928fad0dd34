@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { FirstPipe } from './first.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FirstPipe
   ],
   imports: [
     BrowserModule,
