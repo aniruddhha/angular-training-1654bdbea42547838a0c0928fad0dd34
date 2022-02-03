@@ -1,0 +1,34 @@
+<form class="container mt-3" [formGroup]="fg" (ngSubmit)="onCreateInvoice()">
+    <fieldset>
+        <legend>Create New Invoice 📄</legend>
+        
+        <div class="row g-3 align-items-center">
+            <div class="col-auto form-floating mb-3">
+                <input type="text" class="form-control" placeholder="Invoice Number" formControlName="invNum">
+                <label >Invoice Number</label>
+            </div>
+            <div class="col-auto form-floating mb-3">
+                <input type="date" class="form-control" placeholder="dd-mm-yyyy" formControlName="inDt">
+                <label>Invoice Date</label>
+            </div>
+            <div class="col-auto form-floating mb-3">
+                <input type="number" class="form-control" placeholder="Amount" formControlName="amount">
+                <label>Amount</label>
+            </div>
+            <div class="col-auto form-floating mb-3" >
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" autocomplete="off" formControlName="status" checked>
+                    <label class="btn btn-outline-primary">Current</label>
+                  
+                    <input type="radio" class="btn-check" autocomplete="off" formControlName="status">
+                    <label class="btn btn-outline-primary">Future</label>
+                  </div>
+            </div>
+        </div>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <input type="submit" value="Create" class="btn btn-primary">
+            </div>
+        </div>
+    </fieldset>
+</form>

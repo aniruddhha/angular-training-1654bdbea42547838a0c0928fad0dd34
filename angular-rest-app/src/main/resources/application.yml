@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:invoices
+    username: sa
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+
+
+
+
