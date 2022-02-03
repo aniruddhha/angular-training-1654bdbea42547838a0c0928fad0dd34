@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FirstPipe } from './first.pipe';
+import { BasicDirective } from './basic.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstPipe
+    FirstPipe,
+    BasicDirective
   ],
   imports: [
     BrowserModule,

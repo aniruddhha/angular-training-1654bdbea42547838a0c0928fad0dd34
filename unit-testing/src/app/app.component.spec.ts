@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { BasicDirective } from './basic.directive';
 import { FirstPipe } from './first.pipe';
 
 describe('AppComponent', () => {
@@ -7,7 +8,8 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        FirstPipe
+        FirstPipe,
+        BasicDirective
       ],
     }).compileComponents(); // please load component
   });
@@ -62,5 +64,30 @@ describe('AppComponent', () => {
     const actualTextContext = compiled.querySelector('#dv')?.textContent
     const expctedTextContent = 'First Country is : pqr'
     expect(actualTextContext).toEqual(expctedTextContent)
+  })
+
+  it('check directive functionality', () =>{
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+
+    const ip: HTMLElement = fixture.nativeElement.querySelector('#ip')
+    const border = ip.style.border
+    expect(border).toBe('1px solid red')
+  })
+
+  it('check directive functionality on event', () =>{
+    const fixture = TestBed.createComponent(AppComponent);
+
+    const ip: HTMLElement = fixture.nativeElement.querySelector('#ip')
+    ip.dispatchEvent(new MouseEvent('mouseover', {
+      view: window,
+      bubbles: true,
+      cancelable: true
+  }))
+
+    fixture.detectChanges();
+
+    const border = ip.style.border
+    expect(border).toBe('1px solid blue')
   })
 });
