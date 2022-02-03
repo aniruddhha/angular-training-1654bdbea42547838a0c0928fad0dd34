@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, tick } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { BasicDirective } from './basic.directive';
 import { FirstPipe } from './first.pipe';
@@ -79,7 +79,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
 
     const ip: HTMLElement = fixture.nativeElement.querySelector('#ip')
-    ip.dispatchEvent(new MouseEvent('mouseover'))
+
+    ip.dispatchEvent(new MouseEvent('mouseenter'))
 
     fixture.detectChanges();
 
