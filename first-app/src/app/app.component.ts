@@ -13,9 +13,22 @@ export class AppComponent {
 
   date = new Date()
   amount = 123445
+  private worker ?: Worker// ? represents it can be null
+
+  constructor() {
+
+    if (typeof Worker !== 'undefined') {
+      this.worker = new Worker(new URL('./app.worker', import.meta.url));
+      
+      this.worker.onmessage = ({ data }) => {
+        console.log(`Component Got the Message : ${data.dt}`);
+      };
+    } 
+  }
 
   onBtnClk() {
     this.isShow = !this.isShow
+    this.worker?.postMessage({ dt : 'hi' })
   }
 
   onNowDate() {
@@ -27,14 +40,3 @@ export class AppComponent {
   }
 }
 
-if (typeof Worker !== 'undefined') {
-  // Create a new
-  const worker = new Worker(new URL('./app.worker', import.meta.url));
-  worker.onmessage = ({ data }) => {
-    console.log(`page got message: ${data}`);
-  };
-  worker.postMessage('hello');
-} else {
-  // Web Workers are not supported in this environment.
-  // You should add a fallback so that your program still executes correctly.
-}
