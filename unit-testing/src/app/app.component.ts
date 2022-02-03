@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'unit-testing';
   res = 0
+  countries = 'abc,pqr,lmn,xyz,hij'
 
   add(num1 : number, num2 : number) {
     this.res = num1 + num2

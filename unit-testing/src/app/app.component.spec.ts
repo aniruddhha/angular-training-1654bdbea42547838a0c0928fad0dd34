@@ -1,11 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { FirstPipe } from './first.pipe';
 
 describe('AppComponent', () => {
   beforeEach(async () => { // before running each test case
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        FirstPipe
       ],
     }).compileComponents(); // please load component
   });
@@ -47,6 +49,18 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     const actualTextContext = compiled.querySelector('#res')?.textContent
     const expctedTextContent = 'Addition is 99'
+    expect(actualTextContext).toEqual(expctedTextContent)
+  })
+
+  it('check first pipe', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    app.countries = 'abc,pqr,lmn,xyz,hij'
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const actualTextContext = compiled.querySelector('#dv')?.textContent
+    const expctedTextContent = 'First Country is : pqr'
     expect(actualTextContext).toEqual(expctedTextContent)
   })
 });
